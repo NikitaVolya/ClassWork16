@@ -2,6 +2,8 @@
 #include <iostream>
 #include <string>
 
+#include "Pet.h"
+
 using namespace std;
 class Human {
 protected:
@@ -25,16 +27,22 @@ public:
     }
 };
 
+
+
 int main()
 {
-    Human testHuman("Human name", 20);
-    BasketballPlayer testPlayer("Basketball Player", 10, 20.5f, 50);
+    Dog a("Frenk");
+    Cat b("Murka");
+    Parrot c("Dilan");
 
-    Human* testHumanRef = &testHuman;
-    Human* testBasketballPlayer = &testPlayer;
+    std::cout << a.getName() << std::endl << b.getName() << std::endl << c.getName() << "\n------------\n";
 
-    testHumanRef->display();
-    testBasketballPlayer->display();
+    a.sound();
+    b.sound();
+    c.sound();
+ 
 
-	return 0;
+    std::cout << "\n------------\n" << a.getKind() << std::endl << b.getKind() << std::endl << c.getKind();
+    
+    return 0;
 }
