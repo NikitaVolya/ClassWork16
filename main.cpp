@@ -30,11 +30,11 @@ int main()
     Human testHuman("Human name", 20);
     BasketballPlayer testPlayer("Basketball Player", 10, 20.5f, 50);
 
-    Human& testHumanRef = testHuman;
-    Human& testBasketballPlayer = testPlayer;
+    Human* testHumanRef = &testHuman;
+    Human* testBasketballPlayer = &testPlayer;
 
-    testHumanRef.display();
-    testBasketballPlayer.display();
+    testHumanRef->display();
+    testBasketballPlayer->display();
 
 	return 0;
 }
